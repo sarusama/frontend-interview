@@ -376,3 +376,26 @@ Proxy - 客户端代理 - webpack，服务端代理 - 请求转发
 ```
 () => import("路径")
 ```
+
+## cookie和session
+
+1、存储位置不同，Cookie在浏览器端存储，Session在服务器端存储；
+2、存储容量不同，Cookie存储容量很小，Session存储容量可以很大；
+3、安全性不同，Cookie安全性较低，Session安全性很高；
+
+## vue基本原理
+
+当一个Vue实例创建时，Vue会遍历data中的属性，用 Object.defineProperty（vue3.0使用proxy ）将它们转为 getter/setter，并且在内部追踪相关依赖，在属性被访问和修改时通知变化。 每个组件实例都有相应的 watcher 程序实例，它会在组件渲染的过程中把属性记录为依赖，之后当依赖项的setter被调用时，会通知watcher重新计算，从而致使它关联的组件得以更新。
+
+## 对象属性删除
+
+delete object.attribute
+
+## axios原理
+
+1、request方法，Axios外部方法其实都是在调用这一个方法
+2、方法内部创建一个Promise链式调用，常用的功能，拦截器，数据修改器，http请求，就是在这个Promise链式调用中逐步被执行。request方法返回Promise链。我们用的就是这个返回的Promise，执行结果就在这个Promise中的状态值中。
+
+## css选择器优先级
+
+内联 > ID选择器 > 类选择器 > 标签
