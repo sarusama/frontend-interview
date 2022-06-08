@@ -2,6 +2,16 @@
 
 frontend interview
 
+## 基础数据类型
+
+Null
+Undefined
+Number
+String
+Boolean
+Symbol
+BigInt
+
 ## es5，es6，es7的区别
 
 es5 扩展了Object、Array、Function等的功能
@@ -11,6 +21,12 @@ es6 类、模块化、箭头函数、函数参数默认值、模版字符串、�
 es7 Array.prototype.includes()、指数操作符
 
 es8 async/await、Object.values()、Object.entries()、String padding、函数参数列表结尾允许逗号、Object.getOwnPropertyDescriptors()等
+
+## 原型，原型链，构造器
+
+- 原型 prototype 每个对象都有一个原型，Object指向null
+- 原型链 prototype chain，_proto_用于指向创建当前对象的构造函数的原型对象
+- 构造器 constructor 指向自己
 
 ## JS实现继承
 
@@ -175,7 +191,7 @@ console.log(person.getFriends()); // child5
 
 渐变，动画，变形，过渡，圆角，阴影，flexbox，word-break，text-overflow
 
-## vue的数据绑定原理
+## vue的双向数据绑定原理
 
 vue2是用过Object.defineProperty实现数据响应式。Vue数据双向绑定原理是通过 数据劫持结合发布者-订阅者模式 的方式来实现的，首先是通过ES5提供的 Object.defineProperty() 方法来劫持（监听）各属性的getter、setter，并在当监听的属性发生变动时通知订阅者，是否需要更新，若更新就会执行对应的更新函数。
 
@@ -452,3 +468,11 @@ Object.freeze({})
 ## DNS的作用
 
 DNS协议说简单一点就是域名解析，将域名解析为IP地址。 可以把它当作是一个电话本，用来记录某个人所对应的电话号码。 我们熟悉的TCP/IP协议都是根据IP地址来访问远程主机。 但是我们访问网址时，通常用的都是域名。便于访问互联网。域名dns的功能是为实现域名和IP的映射功能，因为在网络通讯时，需要将域名转化为IP地址。 它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网。 简单来说，就是一个将域名翻译成ip地址的系统。
+
+## http和https的区别
+
+http是超文本传输协议，信息是明文传输;
+https 则是具有安全性的ssl加密传输协议;
+http和https使用的是完全不同的连接方式用的端口也不一样,http是80,https是443;
+http的连接很简单,是无状态的;
+HTTPS协议是由SSL+HTTP协议构建的可进行加密传输、身份认证的网络协议。
